@@ -15,4 +15,8 @@ class Bear
     @fishes_in_stomach.push(fish)
     river.remove_fish(fish)
   end
+
+  def roar
+    return "ROAR"
+  end
 end

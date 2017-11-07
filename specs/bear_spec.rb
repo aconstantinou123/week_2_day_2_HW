@@ -31,4 +31,8 @@ class TestBear < Minitest::Test
     assert_equal(2, @river_1.number_of_fishes)
   end
 
+  def test_roar
+    assert_equal("ROAR", @bear_1.roar)
+  end
+
 end
