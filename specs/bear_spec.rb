@@ -25,11 +25,18 @@ class TestBear < Minitest::Test
     assert_equal(0, @bear_1.contents)
   end
 
-  def test_eat_fish
-    @bear_1.eat_fish(@fish_1, @river_1)
+  def test_eat_fish_alt
+    @bear_1.eat_first_fish(@river_1)
     assert_equal(1, @bear_1.contents)
     assert_equal(2, @river_1.number_of_fishes)
   end
+
+  # def test_eat_fish
+  #   @bear_1.eat_fish(@fish_1, @river_1)
+  #   assert_equal(1, @bear_1.contents)
+  #   assert_equal(2, @river_1.number_of_fishes)
+  # end
+
 
   def test_roar
     assert_equal("ROAR", @bear_1.roar)

@@ -13,16 +13,21 @@ class TestRiver < MiniTest::Test
     @river_1 = River.new("Amazon", [@fish_1, @fish_2, @fish_3])
   end
 
-  def test_name
-    assert_equal("Amazon", @river_1.name)
-  end
+    def test_name
+      assert_equal("Amazon", @river_1.name)
+    end
 
-  def test_number_of_fishes
-    assert_equal(3, @river_1.number_of_fishes)
-  end
+    def test_number_of_fishes
+      assert_equal(3, @river_1.number_of_fishes)
+    end
 
-  def test_remove_fish
-    @river_1.remove_fish(@fish_1)
-    assert_equal(2, @river_1.number_of_fishes)
-  end
+    def test_remove_fish_alt
+      @river_1.remove_first_fish()
+      assert_equal(2, @river_1.number_of_fishes)
+    end
+
+  # def test_remove_fish
+  #   @river_1.remove_fish(@fish_1)
+  #   assert_equal(2, @river_1.number_of_fishes)
+  # end
 end
