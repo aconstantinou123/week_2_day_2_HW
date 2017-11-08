@@ -12,10 +12,9 @@ class Bear
   end
 
   def eat_first_fish(river)
-    @fishes_in_stomach.push(river.fishes[1])
-    river.remove_first_fish
+    @fishes_in_stomach.push(river.remove_first_fish)
   end
-  
+
   # def eat_fish(fish, river)
   #   @fishes_in_stomach.push(fish)
   #   river.remove_fish(fish)
